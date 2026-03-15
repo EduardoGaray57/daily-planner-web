@@ -1,16 +1,34 @@
-# React + Vite
+# Daily Planner Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web fullstack para planificar y gestionar tareas diarias con timer integrado.
 
-Currently, two official plugins are available:
+## Demo
+https://daily-planner-web-coral.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías
+- React + Vite
+- React Router DOM
+- Axios
+- Recharts
+- JWT Authentication
 
-## React Compiler
+## Funcionalidades
+- Registro e inicio de sesión
+- Crear tareas con duración y categoría
+- Timer de cuenta regresiva por tarea
+- Marcar tareas como completadas
+- Estadísticas de tiempo por categoría
+- Selector de fecha para ver tareas del día
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Backend
+https://github.com/EduardoGaray57/daily-planner-api
 
-## Expanding the ESLint configuration
+## Correr localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio
+2. Instalar dependencias: npm install
+3. Iniciar servidor: npm run dev
+4. Abrir http://localhost:5173
+
+## Tests
+npm test
