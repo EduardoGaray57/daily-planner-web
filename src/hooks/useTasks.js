@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getTasks, createTask, updateTask, deleteTask } from "../services/api.js";
 
-export const useTasks = () =>{
+export const useTasks = () => {
     const [tasks, setTasks] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
@@ -24,7 +24,8 @@ export const useTasks = () =>{
     }
 
     const editTask = async (id, data) => {
-        const res = await updateTask(id, data)
+        const task = tasks.find(t => t.id === id)
+        const res = await updateTask(id, { ...task, ...data })
         setTasks(prev => prev.map(t => t.id === id ? res.data : t))
     }
 

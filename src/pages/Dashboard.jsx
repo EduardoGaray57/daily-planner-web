@@ -10,8 +10,8 @@ import { colors, common } from "../styles/theme.js";
 function Dashboard() {
     const navigate = useNavigate()
     const { tasks, loading, fetchTasks, addTask, editTask, removeTask } = useTasks()
-    const [ categories, setCategories ] = useState([])
-    const [ selectedDate, setSelectedDate ] = useState(new Date().toISOString().split('T')[0])
+    const [categories, setCategories] = useState([])
+    const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0])
 
     useEffect(() => {
         const token = localStorage.getItem('access_token')
@@ -24,7 +24,7 @@ function Dashboard() {
     }, [selectedDate])
 
     const handleComplete = async (id) => {
-        await editTask(id, {status: 'done'})
+        await editTask(id, { status: 'done' })
         fetchTasks(selectedDate)
     }
 
@@ -37,12 +37,20 @@ function Dashboard() {
         <div style={{ ...common.pageContainer, maxWidth: '800px', margin: '0 auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
                 <h1 style={{ margin: 0, color: colors.text }}>📅 Daily Planner</h1>
-                <button
-                    style={{ ...common.button, backgroundColor: '#30363d', fontSize: '0.85rem', padding: '0.5rem 1rem' }}
-                    onClick={handleLogout}
-                >
-                    Cerrar sesión
-                </button>
+                <div style={{ display: 'flex', gap: '0.75rem' }}>
+                    <button
+                        style={{ ...common.button, backgroundColor: '#30363d', fontSize: '0.85rem', padding: '0.5rem 1rem' }}
+                        onClick={() => navigate('/history')}
+                    >
+                        📋 Historial
+                    </button>
+                    <button
+                        style={{ ...common.button, backgroundColor: '#30363d', fontSize: '0.85rem', padding: '0.5rem 1rem' }}
+                        onClick={handleLogout}
+                    >
+                        Cerrar sesión
+                    </button>
+                </div>
             </div>
 
             <input
