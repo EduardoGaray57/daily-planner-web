@@ -1,7 +1,7 @@
 # 📅 Daily Planner Web
  
 Aplicación web fullstack para organizar el día, gestionar tareas con timer integrado y visualizar estadísticas de productividad por categoría.
-![Daily Planner App](./public/Captura de pantalla 2026-03-19 113325.png)
+
  
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
