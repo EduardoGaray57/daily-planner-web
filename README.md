@@ -92,6 +92,13 @@ daily-planner-web/
 ```
  
 ---
+
+## 🔗 Proyectos relacionados
+
+- [daily-planner-api](https://github.com/EduardoGaray57/daily-planner-api) — Backend Django REST de esta aplicación
+- [inventory-api](https://github.com/EduardoGaray57/inventory-api) — API REST de gestión de inventario con Swagger
+
+---
  
 ## 👨‍💻 Autor
  
